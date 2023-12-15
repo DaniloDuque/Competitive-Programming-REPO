@@ -13,7 +13,7 @@ void showItems(int cap, int item){
     if (cap == 0 || item <= 0) return;
 
     if (memo[cap][item] > memo[cap][item - 1]) {
-        res.push_back(item - 1); // Restamos 1 para obtener el índice correcto
+        res.push_back(item - 1); 
         return showItems(cap - weights[item - 1], item - 1);
     }
    
