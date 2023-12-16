@@ -4,7 +4,8 @@ using namespace std;
 
 string s;
 
-
+//R = -1
+//B = 1
 
 void accumulatedList(){
 
