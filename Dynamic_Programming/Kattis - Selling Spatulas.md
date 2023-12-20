@@ -1,9 +1,10 @@
 ```cpp
+
 #include <bits/stdc++.h>
 using namespace std;
 
-int n, t; 
-long double p, COST = 0.08;
+int n; 
+long double COST = 0.08;
 vector<int> times;
 vector<long double> profits;
 
@@ -45,15 +46,6 @@ void accumulatedList(){
 
 
 }
-
-
-
-
-
-
-
-
-
 
 
 
