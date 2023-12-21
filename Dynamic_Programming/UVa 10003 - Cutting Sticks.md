@@ -15,7 +15,7 @@ vector<vector<int>> memo;
 
 int minCost(int i, int j){
 
-    int low = upper_bound(cuts.begin(), cuts.end(), i) - cuts.begin();     //binary search possible cuts in range(1, j)
+    int low = upper_bound(cuts.begin(), cuts.end(), i) - cuts.begin();     //binary search possible cuts in range(i, j)
     int high = lower_bound(cuts.begin(), cuts.end(), j) - cuts.begin();
 
     if(low >= high) return 0; // Base case: no possible cuts
