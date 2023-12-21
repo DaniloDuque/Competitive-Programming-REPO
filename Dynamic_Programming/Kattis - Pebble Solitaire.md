@@ -4,12 +4,13 @@ using namespace std;
 
 int n, msk, auxMSK;
 char x;
-vector<int> dp;
-
+int dp[1<<12];
 
 int SET(int msk, int i){return msk|(1<<i);}
 int CLEAR(int msk, int i){return msk^(1<<i);}
 bool TEST(int msk, int i){return msk&(1<<i);}
+
+
 
 
 int countBits(int msk){
@@ -23,6 +24,7 @@ int countBits(int msk){
     }return c;
 
 }
+
 
 
 int minPebbles(int msk){
@@ -66,13 +68,12 @@ int minPebbles(int msk){
 
 
 
-
 int main(){
 
     cin>>n;
     while(n--){
 
-        msk = 0; dp.assign(1<<12 + 1, 0);
+        msk = 0;
         for(int i = 0; i<12; i++){
 
             cin>>x;
