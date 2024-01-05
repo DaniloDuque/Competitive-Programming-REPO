@@ -4,11 +4,10 @@ using namespace std;
 
 
 #define ll long long int
-int n, m, s;
+int n, m;
 bool blank = true;
 
 ll mat[1001][1001];
-
 
 
 void resultMatrix(){
@@ -30,7 +29,6 @@ int main(){
     ios::sync_with_stdio(false);
     while(cin>>n>>m){
 
-        s = (n-m+1);
         for(int i = 1; i<=n; i++)
             for(int j = 1; j<=n; j++){
                 cin>>mat[i][j]; mat[i][j] += mat[i-1][j] + mat[i][j-1] - mat[i-1][j-1];
