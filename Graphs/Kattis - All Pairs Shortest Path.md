@@ -13,7 +13,7 @@ void FloydWarshall(){
     for (int k = 0; k < n; ++k)
 		for (int i = 0; i < n; ++i)
 			for (int j = 0; j < n; ++j) 
-                if((graph[i][j] > graph[i][k] + graph[k][j]) && (graph[i][k] < oo) && (graph[k][j] < oo))
+                		if((graph[i][j] > graph[i][k] + graph[k][j]) && (graph[i][k] < oo) && (graph[k][j] < oo))
 				    graph[i][j] = graph[i][k] + graph[k][j];
     
     for (int i = 0; i < n; ++i)
