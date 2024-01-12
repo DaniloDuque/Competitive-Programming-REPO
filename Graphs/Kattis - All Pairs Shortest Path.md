@@ -3,7 +3,7 @@
 using namespace std;
 
 
-#define oo 1000000
+#define oo (1<<28|1<<27)
 int n, m, q, v1, v2, w;
 int graph[150][150];
 
