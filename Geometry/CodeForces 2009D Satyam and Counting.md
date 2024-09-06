@@ -1,6 +1,5 @@
 ```cpp
 #include <bits/stdc++.h>
-#include <numeric>
 using namespace std;
 
 #define DEBUG(x) cout<<#x<<" = "<<x<<'\n'
