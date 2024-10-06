@@ -13,8 +13,7 @@ using namespace std;
 #define fst first
 #define ll long long
 const int MAX = 2e5+20;
-ll t=1, n, m, q, arr[MAX];
-vec<int> b;
+ll t=1, n, m, q, arr[MAX], b[MAX];
 set<int> available;
 
 bool good(){
@@ -25,8 +24,7 @@ bool good(){
 }
 
 void solve(){        
-    cin>>n>>m>>q; b.assign(m, 0);
-    available.clear();
+    cin>>n>>m>>q; available.clear();
     for(int i = 0; i<n; ++i) cin>>arr[i];
     for(int i = 0; i<m; ++i) cin>>b[i];
     cout<<((good())? "YA" : "TIDAK")<<'\n';
