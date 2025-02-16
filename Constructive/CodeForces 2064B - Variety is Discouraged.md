@@ -1,0 +1,38 @@
+```cpp
+#include <algorithm>
+#include <bits/stdc++.h>
+using namespace std;
+
+#define SET(m, i) ((m) | (1ULL << (i)))
+#define TEST(m, i) ((m) & (1ULL << (i)))
+#define CLEAR(m, i) ((m) &~ (1ULL << (i)))
+#define DEBUG(n) cout<<#n<<" = "<<n<<endl
+#define MSET(arr, x, n) (memset(arr, x, (n)*sizeof(arr[0])))
+#define ALL(v) (v).begin(), (v).end()
+#define vec vector
+#define snd second
+#define fst first
+#define ll long long
+const int MAX = 2e5+20, MOD = 1e9+7;
+int t=1, n, arr[MAX], freq[MAX], len[MAX];
+
+void solve(){        
+    cin>>n; MSET(freq, 0, n+1);
+    MSET(len, 0, n+1);
+    for(int i=0; i<n; ++i) cin>>arr[i];
+    for(int i=0; i<n; ++i) freq[arr[i]]++;
+    len[0]=freq[arr[0]]==1;
+    for(int i=1; i<n; ++i) if(freq[arr[i]]==1) len[i]=1+len[i-1];
+    int mx = *max_element(len, len+n+1);
+    if(!mx) {cout<<0<<endl; return;}
+    for(int i=0; i<n; ++i) if(len[i]==mx) {cout<<i-len[i]+2<<' '<<i+1<<endl; return;}
+}
+
+signed main(){
+    ios::sync_with_stdio(0);
+    cin.tie(0); cout.tie(0);
+    cin>>t;
+    while(t--){
+        solve();
+    }return 0;
+}
