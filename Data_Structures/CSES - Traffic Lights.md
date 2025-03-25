@@ -31,8 +31,7 @@ void solve(){
         cin>>x; arr.insert(x);
         auto lb = arr.find(x);
         ll l = *prev(lb), r = *next(lb);
-        st.erase({l, r}); arr.insert(x);
-        st.insert({l, x}); st.insert({x, r});
+        st.erase({l, r}); st.insert({l, x}); st.insert({x, r});
         auto &[a, b] = *st.begin();
         cout<<b-a<<' ';
     }cout<<endl;
