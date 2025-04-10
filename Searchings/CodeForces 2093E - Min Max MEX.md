@@ -18,7 +18,7 @@ ll n, k;
 vec<ll> arr;
 
 bool chck(ll m) {
-    set<ll> st;
+    unordered_set<ll> st;
     ll rs=0, sum=0;
     for(auto &i : arr) {
         if(i<m && !st.count(i)) st.insert(i), sum++;
@@ -30,7 +30,7 @@ bool chck(ll m) {
     }return rs >= k;
 }
 
-void solve(){        
+void solve(){
     cin>>n>>k; arr.resize(n);
     for(auto &i : arr) cin>>i;
     ll l=0, r=n+1;
